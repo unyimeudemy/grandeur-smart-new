@@ -1,0 +1,36 @@
+import Image from "next/image";
+import React from "react";
+
+const FlowCreation = () => {
+  return (
+    <div className=" w-[100%] h-[937px] flex flex-col justify-center items-center mt-[-50px]">
+      <div className="w-[1186px] h-[136px] flex justify-center">
+        <div className="w-[947px] h-[136px] flex flex-col items-center">
+          <div className="w-[947px] h-[55px] font-helvetica font-bold text-[40px] text-[#5C755E] flex justify-center">
+            Flow Creation
+          </div>
+          <div className="w-[452px] h-[42px] font-helvetica font-bold text-[36px] text-[#212121] mt-[4px]">
+            Your space. Your control.
+          </div>
+          <div className="w-[521px] h-[22px] flex justify-center font-roboto font-medium text-[16px] text-[#212121] mt-[13px]">
+            Explore practical scenarios where SMART automation shines
+          </div>
+        </div>
+      </div>
+      <div className="w-[1100px] h-[739px] mt-[32px]">
+              <video 
+              autoPlay
+              muted
+              loop 
+              width="1100px" 
+              height="auto"
+          >
+              <source className='w-[850px]' src="/videos/flow-with-flashlight-cut.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+      </div>
+    </div>
+  );
+};
+
+export default FlowCreation;

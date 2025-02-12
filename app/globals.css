@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar-link {
+  @apply text-[#212121] font-roboto hover:underline hover:cursor-pointer;
+}
+
+.nav-bar-icon {
+  @apply w-[23.35px] h-[23.17px] text-[#212121] hover:cursor-pointer
+}
