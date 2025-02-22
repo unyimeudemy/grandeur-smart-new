@@ -18,9 +18,8 @@ function Heading() {
   };
 
   return (
-    <div className="flex justify-around mb-[81px]">
-        <div className='h-[556px] w-[556px]'>
-            {/* <NightMode /> */}
+    <div className="  flex flex-col items-center  xl:items-start  xl:flex-row   ">
+        <div className='xl:h-[756px] xl:w-[756px]  xl:mt-0'>
             <Image 
                 src='/images/nightmode.svg'
                 alt='Moon'
@@ -28,65 +27,61 @@ function Heading() {
                 height={556}
             />
         </div>
-        <div className={styles.headdiv}>
-        <div>
-            {/* <div className={styles.h1text}> */}
-            <div className=" mb-[18px] w-[474px] h-[48px] font-helvetica font-bold text-[36px] text-[#212121]">
-                Heading Title will Go here.
-            </div>
-        </div>
-        {/* <div className={styles.p1textdiv}> */}
-        <div className="  mb-[26px]  w-[509px] h-[113px] font-roboto font-medium text-[16px] text-[#212121]">
+        <div className=' xl:ml-[-100px] w-full flex justify-center items-center'>
+            <div className={`${styles.headdiv}   flex flex-col `}>
+                <div className='w-full text-[35px] mb-[10px] flex justify-center'>
+                    <div className=" xl:mb-[18px] xl:w-[474px] xl:h-[48px] font-helvetica font-bold xl:text-[36px] text-[#212121]">
+                        Heading Title will Go here.
+                    </div>
+                </div>
+                <div className='flex justify-center'>
+                    <div className=" mb-3 w-[90%] xl:mb-[26px]  xl:w-[509px] xl:h-[113px] font-roboto font-medium text-[16px] text-[#212121]">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                            sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
+                            magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl 
+                            ut aliquip ex ea commodo consequat. Duis autem
+                    </div>
+                </div>
+                <div className='w-[100%] flex justify-center '>
+                    <div className=' w-[90%] xl:w-[100%]'>
+                        <div className=" xl:mb-[20px] text-[17px] font-bold tracking-[1px] font-sans">
+                            Activate Routine
+                        </div>
+                        <div className={styles.maindiv}>
+                            <div 
+                            className='
+                            mt-[20px]
+                            mobile-320-400:flex
+                            mobile-320-400:justify-center
+                            mobile-401-480:flex
+                            mobile-401-480:justify-center
+                            mobile-481-600:flex
+                            mobile-481-600:justify-center
+                            mobile-601-768:flex
+                            mobile-601-768:justify-center
+                            mobile-769-900:flex
+                            mobile-769-900:justify-center
+                            mobile-901-1200:flex
+                            mobile-901-1200:justify-center
+                            '>
+                                <ThemeToggle />
+                            </div>
+                                <div className={styles.viewdiv}>
+                                        <div className={styles.viewlinkdiv}>
+                                            <Link className={styles.viewlink} href='#'>View All Routine</Link>
+                                    </div>
+                                    <div>
+                                        <GrFormNext className={styles.nextlink} />
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
 
-            {/* <p className={styles.p1text}> */}
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-                quis nostrud exerci tation ullamcorper suscipit lobortis nisl 
-                ut aliquip ex ea commodo consequat. Duis autem
-            {/* </p> */}
-        </div>
-        <div className='mobile-320-400:flex flex-col'>
-            <div>
-                <div className="mb-[20px] text-[17px] font-bold tracking-[1px] font-sans">
-                    Activate Routine
-                </div>
-            </div>
-            <div className={styles.maindiv}>
-            <div 
-            className='
-            mobile-320-400:flex
-            mobile-320-400:justify-center
-            mobile-401-480:flex
-            mobile-401-480:justify-center
-            mobile-481-600:flex
-            mobile-481-600:justify-center
-            mobile-601-768:flex
-            mobile-601-768:justify-center
-            mobile-769-900:flex
-            mobile-769-900:justify-center
-            mobile-901-1200:flex
-            mobile-901-1200:justify-center
-            '>
-                <ThemeToggle />
-            {/* <Image 
-                src='/smalltoggle2.svg'
-                alt='Small Toggle'
-                width={73}
-                height={49}
-            /> */}
-            </div>
-            <div className={styles.viewdiv}>
-                <div className={styles.viewlinkdiv}>
-                    <Link className={styles.viewlink} href='#'>View All Routine</Link>
-                </div>
-                <div>
-                    <GrFormNext className={styles.nextlink} />
-                </div>
-            </div>
             </div>
         </div>
-        </div>
+
     </div>
   )
 }

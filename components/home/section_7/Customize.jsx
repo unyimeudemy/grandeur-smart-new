@@ -67,7 +67,7 @@ function Customize() {
         <Carousel
         plugins={[
             Autoplay({
-            delay: 1200,
+            delay: 2200,
             })
         ]}
         opts={{
@@ -96,8 +96,8 @@ function Customize() {
                     alt="Customize Images"
                     className="
                       rounded-[40px] 
-                      w-[479px] 
-                      h-[701px] 
+                      w-[480px] 
+                      h-[601px] 
                       mx-[100px]
                       object-cover
                       mobile-320-400:w-[400px]

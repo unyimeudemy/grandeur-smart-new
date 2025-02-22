@@ -4,10 +4,10 @@ import MyCarousel1 from '../MyCarousel1'
 
 function MultipleAI() {
   return (
-    <div class="mb-[100px] p-[100px_50px] bg-gradient-to-r from-[#5C755E] to-[#78A67C] w-[100%]">
+    <div className="mb-[100px] p-[100px_50px] bg-gradient-to-r from-[#5C755E] to-[#78A67C] w-[100%] overflow-hidden">
 
-        <div className={styles.hdiv}>
-            <h1 className={styles.htext}>Multiple Integrations Suggested By AI</h1>
+        <div className={`${styles.hdiv} text-[36px] `}>
+            <h1 className={`${styles.htext} `}>Multiple Integrations Suggested By AI</h1>
         </div>
         <div className={styles.pdiv}>
             <p className={styles.ptext}>

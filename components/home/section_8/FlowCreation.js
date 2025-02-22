@@ -3,8 +3,8 @@ import React from "react";
 
 const FlowCreation = () => {
   return (
-    <div className=" w-[100%] h-[937px] flex flex-col justify-center items-center mt-[-50px]">
-      <div className="w-[1186px] h-[136px] flex justify-center">
+    <div className=" overflow-hidden w-[100%] xl:h-[937px] flex flex-col justify-center items-center mt-[-50px]">
+      <div className=" mb-[20px] xl:mb-0 w-[1186px] h-[136px] flex justify-center">
         <div className="w-[947px] h-[136px] flex flex-col items-center">
           <div className="w-[947px] h-[55px] font-helvetica font-bold text-[40px] text-[#5C755E] flex justify-center">
             Flow Creation
@@ -17,7 +17,7 @@ const FlowCreation = () => {
           </div>
         </div>
       </div>
-      <div className="w-[1100px] h-[739px] mt-[32px]">
+      <div className="xl:w-[1100px] xl:h-[739px] xl:mt-[32px]">
               <video 
               autoPlay
               muted
@@ -25,7 +25,7 @@ const FlowCreation = () => {
               width="1100px" 
               height="auto"
           >
-              <source className='w-[850px]' src="/videos/flow-with-flashlight-cut.mp4" type="video/mp4" />
+              <source src="/videos/flow-with-flashlight-cut.mp4" type="video/mp4" />
               Your browser does not support the video tag.
           </video>
       </div>

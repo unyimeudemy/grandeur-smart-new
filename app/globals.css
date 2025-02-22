@@ -14,3 +14,7 @@ body {
 .nav-bar-icon {
   @apply w-[23.35px] h-[23.17px] text-[#212121] hover:cursor-pointer
 }
+
+.container {
+  @apply max-w-[700px]  lg:max-w-[1300px] mx-auto  px-4
+}

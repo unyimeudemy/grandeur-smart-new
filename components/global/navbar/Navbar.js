@@ -38,11 +38,14 @@ function Navbar() {
 
 
   return (
-      <div className='mt-[35px] absolute z-10'>
-        <div className=" flex justify-between shadow-[1px_1px_1px_1px_#f0efef] bg-white w-[1189px] h-[72px]  mx-[80px] rounded-[10px] items-center">
+      <div className='flex justify-center px-8 fixed w-full top-10 z-10'>
 
+        <div className=" bg-white  
+          flex justify-between items-center shadow-[1px_1px_1px_1px_#f0efef] container
+            w-full
+          rounded-[10px] h-[72px]">
           <Link href="/">
-            <div className='w-[92px] h-[29px] ml-[20px] hover:cursor-pointer'>
+            <div className=' ml-[21px] md:w-[92px] md:h-[29px] md:ml-[20px] md:hover:cursor-pointer '>
               <Image
                 src="/images/grandeursmart_logo.svg"
                 alt="Grandeur Smart Logo"
@@ -52,19 +55,22 @@ function Navbar() {
             </div>
           </Link>
 
-          {/* Toggle button for Mobile Menu */}
-          <button onClick={toggleMenu} className="bg-transparent border-none cursor-pointer">
-            {/* Use a suitable icon for toggle */}
-            {/* <FiMenu className={styles.toggle} /> */}
-            {isMenuOpen ? <FiX className="text-black w-[30px] h-[30px] hidden" /> : <FiMenu className="text-black w-[30px] h-[30px] hidden" />}
-          </button>
+          <div className='flex items-center justify-center mr-[24px] gap-[16px]  lg:hidden '>
+            <Image
+              src="/images/CartIcon.svg"
+              alt="energy insight"
+              width={579}
+              height={432}
+              className="w-[40px] h-[40px]"
+            />
+            <button onClick={toggleMenu} className="lg:bg-transparent lg:border-none lg:cursor-pointer">
+              {isMenuOpen ? <FiX className="lg:text-black lg:w-[30px] lg:h-[30px] h-[30px] w-[30px]" /> : <FiMenu className="lg:text-black lg:w-[30px] lg:h-[30px] lg:hidden h-[30px] w-[30px]" />}
+            </button>
+          </div>
 
 
           
-          <div
-            // className={`${styles.navLinks} ${isMenuOpen ? styles.show : ''}`}
-            >
-            <div className="w-[635px] h-[24px] flex gap-[20px]">
+            <div className="lg:w-[635px] lg:h-[24px] lg:flex lg:gap-[20px] hidden">
               <Link className="nav-bar-link" href="/" prefetch={true}>Home</Link>
               <Link className="nav-bar-link" href="/security/security" prefetch={true}>Getting Started</Link>
               <Link className="nav-bar-link" href="/energynav/energynav" prefetch={true}>Product</Link>
@@ -72,47 +78,48 @@ function Navbar() {
               <Link className="nav-bar-link" href="/documentation" prefetch={true}>Documentation</Link>
               <Link className="nav-bar-link" href="/integration/integration" prefetch={true}>Integration</Link>
             </div>
-          </div>
-          <div className="flex items-center gap-[20px] mr-[20px]">
-          <Link href="#">
-              <Image
-                src="/images/searchicon.svg"
-                alt="search"
-                width={23.17}
-                height={23.35}
-                className="nav-bar-icon"
-              />
-            </Link>
+          <div className="lg:flex lg:items-center lg:gap-[20px] lg:mr-[20px] hidden">
             <Link href="#">
-              <Image
-                src="/images/profile.svg"
-                alt="sign-in"
-                width={23.17}
-                height={23.35}
-                className="nav-bar-icon"
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/images/usflag.svg"
-                alt="USA flag"
-                width={23.17}
-                height={23.35}
-                className="nav-bar-icon"
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/images/cart.svg"
-                alt="shopping cart"
-                width={23.17}
-                height={23.35}
-                className="nav-bar-icon"
-              />
-            </Link>
+                <Image
+                  src="/images/searchicon.svg"
+                  alt="search"
+                  width={23.17}
+                  height={23.35}
+                  className="nav-bar-icon"
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src="/images/profile.svg"
+                  alt="sign-in"
+                  width={23.17}
+                  height={23.35}
+                  className="nav-bar-icon"
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src="/images/usflag.svg"
+                  alt="USA flag"
+                  width={23.17}
+                  height={23.35}
+                  className="nav-bar-icon"
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src="/images/cart.svg"
+                  alt="shopping cart"
+                  width={23.17}
+                  height={23.35}
+                  className="nav-bar-icon"
+                />
+              </Link>
             </div>
           </div>
-        </div>
+
+      </div>
+        
   );
 }
 

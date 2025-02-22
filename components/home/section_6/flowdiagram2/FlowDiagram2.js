@@ -202,29 +202,33 @@ const FlowDiagram2 = () => {
 //   );
 
 return (
-    <div className=' w-[100%] h-[787px] flex flex-col items-center justify-center bg-gradient-to-r from-[#5C755E] to-[#78A67C]'>
-      <div className="flex gap-[175px] w-[1196px] h-[747px] mt-[63px] ml-[83px] mr-[70px] mb-[104px] ">
-        <div className="w-[403px] h-[747px] flex flex-col mt-[20px]">
-          <div className="w-[403px] h-[146px] mt-[44px] flex flex-col">
-            <Image 
-              src="/images/logoplustext.svg" 
-              width={403} 
-              height={84} 
-              alt="Logo Plus Text" 
-            />
-            <div className="w-[403px] h-[44px] font-roboto text-[16px] font-medium text-white mt-[18px]">
+    // <div className=' w-[100%] h-[787px] flex flex-col items-center justify-center bg-gradient-to-r from-[#5C755E] to-[#78A67C]'>
+    <div className=' overflow-hidden w-[100%] h-[787px] flex flex-col items-center justify-center bg-gradient-to-r from-[#5C755E] to-[#78A67C]'>
+      <div className="mt-[80px]  w-[90%] items-center flex flex-col xl:flex-row  xl:gap-[175px] xl:w-[1196px] xl:h-[747px] xl:mt-[63px] xl:ml-[83px] xl:mr-[70px] xl:mb-[104px] ">
+        <div className=" w-[95%] xl:w-[403px] xl:h-[747px] flex flex-col xl:mt-[20px]">
+          <div className="xl:w-[403px] xl:h-[146px] xl:mt-[44px] flex flex-col">
+            <div className='w-[350px]  xl:w-[403px] xl:h-[84px]'>
+              <Image 
+                src="/images/logoplustext.svg" 
+                width={403} 
+                height={84} 
+                alt="Logo Plus Text" 
+              />
+            </div>
+            <div className=" mt-[15px] text-[15px] xl:w-[403px] xl:h-[44px] font-roboto xl:text-[16px] font-medium text-white xl:mt-[18px]">
               Experience proactive, AI-driven control that adapts to your needs—even when you’re not around.
             </div>
           </div>
         </div>
-        <div className="w-[390px] h-[506px] flex flex-col items-center">
-          <Image 
-            src="/images/flow2.svg" 
-            width={464} 
-            height={706} 
-            alt="Flow Diagram" 
-          />
-         
+        <div className=" mt-[-20px] xl:mt-[-280px] xl:w-[390px] xl:h-[506px] flex flex-col items-center">
+          <div className='w-[330px]  xl:w-[434px] xl:h-[706px]'>
+            <Image 
+              src="/images/flow2.svg" 
+              width={464} 
+              height={706} 
+              alt="Flow Diagram" 
+            />
+         </div>
         </div>
       </div>
     </div>

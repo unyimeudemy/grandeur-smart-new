@@ -209,34 +209,35 @@ const FlowDiagram = () => {
 
 return (
     <div className=' w-[100%] h-[787px] flex flex-col items-center justify-center bg-gradient-to-r from-[#5C755E] to-[#78A67C]'>
-      <div className="flex w-[1196px] h-[747px] mt-[63px] ml-[83px] mr-[70px] mb-[104px] ">
-        {/* Left Section */}
-        <div className="w-[403px] h-[747px] flex flex-col mt-[20px]">
-          <div className="w-[403px] h-[146px] mt-[44px] flex flex-col">
-            <Image 
-              src="/images/logoplustext.svg" 
-              width={403} 
-              height={84} 
-              alt="Logo Plus Text" 
-            />
-            <div className="w-[403px] h-[44px] font-roboto text-[16px] font-medium text-white mt-[18px]">
+      <div className=" w-[90%] flex flex-col items-center xl:flex-row xl:w-[1196px] xl:h-[747px] xl:mt-[63px] xl:ml-[83px] xl:mr-[70px] xl:mb-[104px] ">
+        <div className="xl:w-[403px] w-[90%] xl:h-[747px] flex flex-col xl:mt-[20px] ">
+          <div className="  xl:w-[403px] xl:h-[146px] xl:mt-[44px] flex flex-col ">
+            <div className='w-[350px]  xl:w-[403px] xl:h-[84px]'>
+              <Image 
+                  src="/images/logoplustext.svg" 
+                  width={403} 
+                  height={84} 
+                  alt="Logo Plus Text" 
+                />
+            </div>
+            <div className="mt-[20px] text-[15px] xl:w-[403px] xl:h-[44px] font-roboto xl:text-[16px] font-medium text-white xl:mt-[18px]">
               Experience proactive, AI-driven control that adapts to your needs—even when you’re not around.
             </div>
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="w-[749px] h-[747px] flex flex-col items-center">
-          <Image 
-            src="/images/flow.svg" 
-            width={739} 
-            height={627} 
-            alt="Flow Diagram" 
-          />
-          <div className="w-[739px] h-[111px] mt-[9px] flex gap-[31px]">
-            {/* Item 1 */}
-            <div className="w-[356px] h-[111px] flex">
-              <div className="w-[72px] h-[111px] flex flex-col">
+        <div className=" xl:w-[749px] xl:h-[747px] flex flex-col items-center">
+          <div className='w-[450px]  xl:w-[739px] xl:h-[627px]'>
+            <Image 
+              src="/images/flow.svg" 
+              width={739} 
+              height={627} 
+              alt="Flow Diagram" 
+            />
+          </div>
+          <div className=" w-[80%] flex flex-col xl:flex-row xl:w-[739px] xl:h-[111px] xl:mt-[9px]  xl:gap-[31px]">
+            <div className="xl:w-[356px] xl:h-[111px] flex gap-[14px] ">
+              <div className=" w-[58px] xl:w-[72px] xl:h-[111px] flex flex-col">
                 <Image 
                   src="/images/warninglogo.svg" 
                   width={54} 
@@ -244,19 +245,17 @@ return (
                   alt="Warning Logo" 
                 />
               </div>
-              <div className="w-[384px] h-[111px] ml-[14px]">
-                <div className="w-[284px] h-[42px] font-helvetica text-[24px] font-bold text-white">
+              <div className="xl:w-[384px] xl:h-[111px] xl:ml-[14px]">
+                <div className=" text-[18px] xl:w-[284px] xl:h-[42px] font-helvetica xl:text-[24px] font-bold text-white">
                   Alert
                 </div>
-                <div className="w-[259px] h-[66px] font-roboto text-[16px] font-medium text-white">
+                <div className="text-[15px] xl:w-[259px] xl:h-[66px] font-roboto xl:text-[16px] font-medium text-white">
                   Send an immediate notification to the user, with a live feed from security cameras.
                 </div>
               </div>
             </div>
-
-            {/* Item 2 */}
-            <div className="w-[356px] h-[111px] flex">
-              <div className="w-[72px] h-[111px] flex flex-col">
+            <div className="xl:w-[356px] xl:h-[111px] flex gap-[14px] ">
+              <div className=" w-[58px] xl:w-[72px] xl:h-[111px] flex flex-col">
                 <Image 
                   src="/images/phonelogo.svg" 
                   width={54} 
@@ -264,11 +263,11 @@ return (
                   alt="Phone Logo" 
                 />
               </div>
-              <div className="w-[384px] h-[111px] ml-[14px]">
-                <div className="w-[284px] h-[42px] font-helvetica text-[24px] font-bold text-white">
+              <div className="xl:w-[384px] xl:h-[111px] xl:ml-[14px]">
+                <div className="text-[18px] xl:w-[284px] xl:h-[42px] font-helvetica xl:text-[24px] font-bold text-white">
                   Follow-up
                 </div>
-                <div className="w-[259px] h-[66px] font-roboto text-[16px] font-medium text-white">
+                <div className="text-[15px] xl:w-[259px] xl:h-[66px] font-roboto xl:text-[16px] font-medium text-white">
                   AI initiates a check with nearby trusted contacts or security services if the user doesn’t respond.
                 </div>
               </div>

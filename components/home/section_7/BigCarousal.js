@@ -15,7 +15,7 @@ const BigCarousal = () => {
     };
   
     return (
-      <div className="w-[100%] h-[701px] mt-[98px] ml-[80px] mr-[83px] flex gap-[28px] bg-red-400">
+      <div className="w-[100%] h-[701px] mt-[98px] ml-[80px] mr-[83px] flex gap-[28px] overflow-hidden">
         <Slider {...settings}>
                 {/* <LeftImage src={customizeyourhome}/>
                 <RightImage src={enhancecustomization}/> */}

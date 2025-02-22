@@ -17,6 +17,7 @@ import UserPermManagement from "@/components/home/section_13/UserPermManagement"
 import GrandeurGateway from "@/components/home/section_12/GrandeurGateway";
 import FlowCreation from "@/components/home/section_8/FlowCreation";
 import Card_carousal from "@/components/home/section_11/Card_carousal";
+import AdvanceFlow from "@/components/home/section_10/AdvanceFlow";
 // import { ReactFlowProvider } from "reactflow";
 // import Carousel3 from "@/components/home/section_8/carousel3/Carousel3";
 
@@ -27,25 +28,29 @@ const _Carousel = dynamic(() => import('@/components/home/section_1/carousel/Car
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <Navbar/>
-      <_Carousel/>
-      <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C] w-[100%] h-[5vh]"></div>
+    <div className=" flex flex-col place-items-center ">
+        <Navbar/>
+        {/* <_Carousel/> */}
+
+      {/* <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C]">
+      </div> */}
+
+      <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C] w-[100%] h-[30px]"></div>
       <Popup/>
       <SmartHome/>
       <MultipleAI/>
       <Heading/>
       <Carousel3 />
-      <div className="bg-gradient-to-r from-[#5C755E] to-[#78A67C] w-[100%] h-[5vh]"></div>
+      <div className="bg-gradient-to-r from-[#5C755E] to-[#78A67C] w-[100%] h-[5vh] mt-[-10px]"></div>
       <Customize/>
-      {/* <BigCarousal/> */}
       <FlowCreation/>
       <Recommendation/>
+      <AdvanceFlow/>
       <Card_carousal/>
-      <GrandeurGateway/>
-      <UserPermManagement/>
-      <Innovative/>
-      <InfoCards/>
+      {/* <GrandeurGateway/> */}
+      {/* <UserPermManagement/> */}
+      {/* <Innovative/> */}
+      {/* <InfoCards/> */}
 
     </div>  
     );

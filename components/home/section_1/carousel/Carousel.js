@@ -19,17 +19,17 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 5000000,
   };
 
   return (
-    <div className="w-[100%] h-[95vh] ">
-    <Slider {...settings}>
-      <Section1 />
-      <Section1b />
-      <Section1c />
-      <Section1d />
-    </Slider>
+    <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C] w-[100%]  h-[1038px] pt-36">
+      <Slider {...settings}>
+        <Section1 />
+        <Section1b />
+        <Section1c />
+        <Section1d />
+      </Slider>
     </div>
   );
 };

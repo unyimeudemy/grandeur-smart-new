@@ -101,13 +101,13 @@ const Chat = () => {
 
     return (
         // <div className={`${styles.container} ${theme === 'dark' ? styles.light : styles.dark}`}>
-        <div className="w-[557px] h-[472px] mt-auto animate-backgroundPop">
-            <div 
+        <div className=" w-[557px] h-[472px] md:mt-auto md:animate-backgroundPop overflow-hidden">
+            {/* <div 
                 className="fixed top-4 left-4 bg-gray-300 text-white border-none rounded-full p-2 cursor-pointer z-[1100]" 
                 onClick={toggleSlide}
             >
                 <FaBars />
-            </div>
+            </div> */}
 
             {/* Slide-Out Panel */}
             <div className={`${styles.slidePanel} ${isSlideOpen ? styles.open : ''}`}>
@@ -142,7 +142,7 @@ const Chat = () => {
             </div>
 
             {/* Centered Background Shapes */}
-            <div
+            {/* <div
                 className={styles.backgroundShapes} 
             >
                 <div
@@ -157,7 +157,8 @@ const Chat = () => {
                     className={styles.circle3}
                     style={{ display: isBackgroundTransparent ? 'none' : 'block' }}
                 ></div>
-            </div>
+            </div> */}
+
             <div className={styles.container2}>
                 <h1 
                     className="text-center py-3 font-bold text-[25px] tracking-wide "
