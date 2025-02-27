@@ -1,9 +1,8 @@
 
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import styles from './PhoneBubble.module.css'
 import Slider from 'react-slick';
-
 
 const CustomPrevArrow = ({ onClick }) => (
     <div
@@ -35,6 +34,42 @@ const CustomPrevArrow = ({ onClick }) => (
 
 
 function PhoneBubble() {
+
+    const videoRef = useRef(null);
+    const [videoEnded, setVideoEnded] = useState(false);
+
+    const handleReplay = () => {
+        videoRef.current.play()
+        setVideoEnded(false)
+
+    }
+
+    const handleSetVideoEnded = () => {
+        setVideoEnded(true)
+    }
+
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        videoRef.current.play();
+                    } else {
+                        videoRef.current.pause();
+                    }
+                },
+                { threshold: 0.7 } 
+            );
+
+            if (videoRef.current) {
+                observer.observe(videoRef.current);
+            }
+
+            return () => {
+                if (videoRef.current) {
+                    observer.unobserve(videoRef.current);
+                }
+            };
+        }, []);
 
     const settings = {
         dots: false,
@@ -225,17 +260,38 @@ function PhoneBubble() {
                     />
                 </div>
             </div>
-            <div className='ml-[-90px] mb-[-50px] outline-none mt-[60px] xl:mt-0'>
-                <video 
-                    className="xl:max-w-[680px] mr-[80px] xl:mr-0"
-                    autoPlay
-                    muted
-                    loop
-                >
-                <source className='w-[850px] ' src="/videos/combined-cut.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-                </video>
+            <div className=' h-[110%] ml-[-150px] xl:ml-0  flex flex-col'>
+                <div className='xl:ml-[100px] xl:mb-[-50px] outline-none mt-[60px] xl:mt-0'>
+                    <video 
+                        className="xl:max-w-[680px] xl:mr-0"
+                        ref={videoRef}
+                        autoPlay
+                        muted
+                        onEnded={() => handleSetVideoEnded()}
+                    >
+                    <source src="/videos/combined-cut.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div className=' h-[40px] w-full  flex justify-end mt-[50px] z-10'>
+                    {videoEnded && 
+                    <div 
+                        className='flex items-center gap-[10px]  hover:cursor-pointer mr-[100px]'
+                        onClick={handleReplay}
+                    > 
+                        <div className='w-[15px] h-full  flex items-center'>
+                            <Image 
+                                src='/images/replay.svg'
+                                width={22}
+                                height={22}
+                                alt='replay icon'
+                            />
+                        </div>
+                        <div className='text-[#212121] font-normal font-roboto text-[17px]'>Replay</div>
+                    </div>}
+                </div>
             </div>
+
         </div>
     </div>
   )

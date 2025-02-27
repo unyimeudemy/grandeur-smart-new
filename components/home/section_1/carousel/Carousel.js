@@ -23,7 +23,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C] w-[100%]  h-[1038px] pt-36">
+    <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C] w-[100%]  h-auto ">
       <Slider {...settings}>
         <Section1 />
         <Section1b />

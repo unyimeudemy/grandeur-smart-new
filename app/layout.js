@@ -12,11 +12,11 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased`}
       >
-        <div className=" bg-[#F5F5F5] ">
-        {/* <div className=" bg-red-500 "> */}
+        <div className=" bg-[#F5F5F5] overflow-hidden">
+          {/* <div className=" bg-red-500 "> */}
 
-        {children}
-        {/* <Footer/> */}
+          {children}
+          <Footer/>
         </div>
       </body>
     </html>

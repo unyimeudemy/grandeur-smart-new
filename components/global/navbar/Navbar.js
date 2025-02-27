@@ -18,10 +18,20 @@ const roboto = Roboto({
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpenDesktop, setIsMenuOpenDesktop] = useState(false)
+  const [show_product_drop_down_list, setshow_product_drop_down_list] = useState(false)
 
   const toggleMenu = () => setIsMenuOpen(prevState => !prevState)
 
   const [isMobile, setIsMobile] = useState(false);
+
+  const handle_product_list = () => {
+    setshow_product_drop_down_list(!show_product_drop_down_list)
+  }
+
+  const handle_product_list_desktop = () => {
+    setIsMenuOpenDesktop(!isMenuOpenDesktop)
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,7 +83,14 @@ function Navbar() {
             <div className="lg:w-[635px] lg:h-[24px] lg:flex lg:gap-[20px] hidden">
               <Link className="nav-bar-link" href="/" prefetch={true}>Home</Link>
               <Link className="nav-bar-link" href="/security/security" prefetch={true}>Getting Started</Link>
-              <Link className="nav-bar-link" href="/energynav/energynav" prefetch={true}>Product</Link>
+              <Link 
+                className="nav-bar-link"  prefetch={true}
+                href=""
+                onClick={handle_product_list_desktop}
+                >
+
+                Product
+              </Link>
               <Link className="nav-bar-link" href="/automation/automates" prefetch={true}>Automate</Link>
               <Link className="nav-bar-link" href="/documentation" prefetch={true}>Documentation</Link>
               <Link className="nav-bar-link" href="/integration/integration" prefetch={true}>Integration</Link>
@@ -117,6 +134,105 @@ function Navbar() {
               </Link>
             </div>
           </div>
+
+          {isMenuOpen && <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className='absolute bg-white h-[79vh] w-[90%] top-[90px]
+            rounded-[10px] 
+             '>
+
+              <div className='flex flex-col m-[60px] gap-5'>  
+                  <div className='text-[#212121] font-semibold font-helvetica text-[18px]'
+                  >Home</div>
+
+                  <div className='text-[#212121] font-semibold font-helvetica text-[18px]'
+                  >Getting started</div>
+                  <div 
+                    onClick={handle_product_list}
+                    className='flex items-center justify gap-2 hover:cursor-pointer'
+                  >
+                    <div className='text-[#212121] font-semibold font-helvetica text-[18px]'
+                      >Product</div>
+                      { show_product_drop_down_list
+                        ? 
+                      <Image
+                          src="/images/arrow-head-down.png"
+                          alt="energy insight"
+                          width={579}
+                          height={432}
+                          className="w-[12px] h-[12px] "
+                        />
+                        :
+                        <Image
+                        src="/images/arrow-head-down.png"
+                        alt="energy insight"
+                        width={579}
+                        height={432}
+                        className="w-[12px] h-[12px] -rotate-90"
+                      />
+                        }
+                  </div>
+                  {show_product_drop_down_list && 
+                  <motion.div 
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className=' h-auto ml-6 mt-[-20px] text-[#212121] font-normal font-helvetica text-[17px]'>
+                      <div className='mt-1 flex flex-col gap-[5px]'>
+                        <a
+                          href="https://grandeursmart.com/estate-plans"
+                        >Real Estate</a>
+                        <a
+                          href="https://grandeursmart.com/estate-plans"
+                        >Energy</a>
+                        <a
+                          href="https://grandeursmart.com/estate-plans"
+                        >Security</a>
+                      </div>
+                      
+                  </motion.div>}
+                  <div className='text-[#212121] font-semibold font-helvetica text-[18px]'
+                  >Automate</div>
+                  <div className='text-[#212121] font-semibold font-helvetica text-[18px]'
+                  >Documentation</div>
+                  <div className='text-[#212121] font-semibold font-helvetica text-[18px]'
+                  >Integration</div>
+              </div>
+
+            <div/>
+          </motion.div>}
+
+          {isMenuOpenDesktop && <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className='absolute bg-white h-[50vh] w-[90%] top-[90px]
+            rounded-[10px] 
+             '>
+              <div className='flex flex-col m-[60px] gap-5'>  
+                  <div className='text-[#212121] font-semibold font-helvetica text-[18px]'
+                  >
+                    <div className='mt-1 flex flex-col gap-[5px]'>
+                        <a
+                          href="https://grandeursmart.com/estate-plans"
+                        >Real Estate</a>
+                        <a
+                          href="https://grandeursmart.com/estate-plans"
+                        >Energy</a>
+                        <a
+                          href="https://grandeursmart.com/estate-plans"
+                        >Security</a>
+                      </div>
+                  </div>
+
+              </div>
+            <div/>
+          </motion.div>}
 
       </div>
         

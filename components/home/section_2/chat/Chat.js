@@ -101,7 +101,9 @@ const Chat = () => {
 
     return (
         // <div className={`${styles.container} ${theme === 'dark' ? styles.light : styles.dark}`}>
-        <div className=" w-[557px] h-[472px] md:mt-auto md:animate-backgroundPop overflow-hidden">
+        // <div className=" bg-red-600 w-[557px] h-[472px] xl:h-[400px] xl:mt-auto xl:animate-backgroundPop overflow-hidden">
+        <div className="  w-full xl:w-[557px] h-[472px] xl:mt-[120px]  xl:animate-backgroundPop overflow-hidden">
+
             {/* <div 
                 className="fixed top-4 left-4 bg-gray-300 text-white border-none rounded-full p-2 cursor-pointer z-[1100]" 
                 onClick={toggleSlide}
@@ -164,7 +166,7 @@ const Chat = () => {
                     className="text-center py-3 font-bold text-[25px] tracking-wide "
                     style={{ color: theme === 'dark' ? 'white' : 'white' }}
                 >
-                    <div className="text-[#cccccc]">Ask GrandeurSmart GBT</div>
+                    <div className="text-[#cccccc]">Ask GrandeurSmart GPT</div>
                 </h1>
                 <div className={styles.messagediv}>
                     <div className={styles.message}>

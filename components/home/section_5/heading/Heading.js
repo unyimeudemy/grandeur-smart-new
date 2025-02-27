@@ -31,16 +31,13 @@ function Heading() {
             <div className={`${styles.headdiv}   flex flex-col `}>
                 <div className='w-full text-[35px] mb-[10px] flex justify-center'>
                     <div className=" xl:mb-[18px] xl:w-[474px] xl:h-[48px] font-helvetica font-bold xl:text-[36px] text-[#212121]">
-                        Heading Title will Go here.
+                        Night Mode Automation.
                     </div>
                 </div>
                 <div className='flex justify-center'>
                     <div className=" mb-3 w-[90%] xl:mb-[26px]  xl:w-[509px] xl:h-[113px] font-roboto font-medium text-[16px] text-[#212121]">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                            sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-                            magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl 
-                            ut aliquip ex ea commodo consequat. Duis autem
+                    Night Mode is designed to create a restful environment, enhancing comfort and security during nighttime hours. With intelligent automation, Night Mode seamlessly adjusts your home’s settings to match your preferred nighttime routine.
+
                     </div>
                 </div>
                 <div className='w-[100%] flex justify-center '>
@@ -51,7 +48,7 @@ function Heading() {
                         <div className={styles.maindiv}>
                             <div 
                             className='
-                            mt-[20px]
+                            mt-[20px] xl:mt-0
                             mobile-320-400:flex
                             mobile-320-400:justify-center
                             mobile-401-480:flex
