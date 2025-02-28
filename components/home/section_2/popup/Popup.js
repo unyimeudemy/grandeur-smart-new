@@ -25,14 +25,16 @@ function Popup() {
                     See how AI-driven automations transform home energy management, security, and comfort.
                 </div>
                     <div className='xl:flex xl:justify-center xl:w-full xl:h-full'>
-                        <iframe 
+                        <video
                             className="w-full h-[301px] xl:w-[632px] xl:h-[401px] rounded-[15px] object-cover"
-                            src="https://drive.google.com/file/d/1Q3L-dJ3fc-nwdxF8W4s9uK1tvGq-3qT2/preview"
-                            title="Google Drive Video"
-                            frameBorder="0"
-                            allow="autoplay; fullscreen"
-                            allowFullScreen
-                        />
+                            autoPlay
+                            loop   
+                            playsInline  
+                            controls
+                        >
+                            <source src='/videos/smarthome.mp4' type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
             </div>
             <div className="  h-[377px] w-[425px] md:w-[640px] md:h-[658px] flex md:flex-col md:ml-[23px] ">
