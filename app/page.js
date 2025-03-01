@@ -16,9 +16,11 @@ import InfoCards from "@/components/home/section_16/InfoCards";
 import UserPermManagement from "@/components/home/section_13/UserPermManagement";
 import GrandeurGateway from "@/components/home/section_12/GrandeurGateway";
 import FlowCreation from "@/components/home/section_8/FlowCreation";
-import Card_carousal from "@/components/home/section_11/Card_carousal";
 import AdvanceFlow from "@/components/home/section_10/AdvanceFlow";
 import SmartSpeaker from "@/components/home/section_10_b/SmartSpeaker";
+import Card_carousal_1 from "@/components/home/section_11/Card_carousal_1";
+import Card_carousal_2 from "@/components/home/section_11/Card_carousal_2";
+import Card_carousal_3 from "@/components/home/section_11/Card_carousal_3";
 // import { ReactFlowProvider } from "reactflow";
 // import Carousel3 from "@/components/home/section_8/carousel3/Carousel3";
 
@@ -44,7 +46,10 @@ export default function Home() {
       <Recommendation/>
       <AdvanceFlow/>
       <SmartSpeaker/>
-      <Card_carousal/>
+      <Card_carousal_1/>
+      <Card_carousal_2/>
+      <Card_carousal_3/>
+
       <div className="bg-[#F5F5F5] h-[5vh]  mt-[-10px]"></div>
       <GrandeurGateway/>
       <UserPermManagement/>

@@ -20,6 +20,9 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpenDesktop, setIsMenuOpenDesktop] = useState(false)
   const [show_product_drop_down_list, setshow_product_drop_down_list] = useState(false)
+  const [flag_src, set_flag_src] = useState("")
+  const [countryCode, setCountryCode] = useState("")
+
 
   const toggleMenu = () => setIsMenuOpen(prevState => !prevState)
 
@@ -34,18 +37,33 @@ function Navbar() {
   }
 
   useEffect(() => {
+
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+      setIsMobile(window.innerWidth <= 768); 
     };
 
-    // Initial check and event listener
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+    .then((res) => res.json())
+    .then((data) => {
+        fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_21EdwHCkBUXdxaxU7xThnUr2mQjZc&ipAddress=${data.ip}`)
+        .then((res) => res.json())
+        .then((data) => {      
+            setCountryCode(data.location.country)
+            const country_code = data.location.country;
+            const country_code_formated = country_code.toLowerCase();
+            set_flag_src(country_code_formated)
+        })
+        .catch((err) => console.error("Error fetching country:", err));
+    })
+    .catch((err) => console.error("Error fetching country:", err));
+  }, [])
 
   return (
       <div className='flex justify-center px-8 fixed w-full top-10 z-10'>
@@ -82,16 +100,15 @@ function Navbar() {
           
             <div className="lg:w-[635px] lg:h-[24px] lg:flex lg:gap-[20px] hidden">
               <Link className="nav-bar-link" href="/" prefetch={true}>Home</Link>
-              <Link className="nav-bar-link" href="/security/security" prefetch={true}>Getting Started</Link>
+              {/* <Link className="nav-bar-link" href="/security/security" prefetch={true}>Getting Started</Link> */}
               <Link 
                 className="nav-bar-link"  prefetch={true}
                 href=""
                 onClick={handle_product_list_desktop}
                 >
-
-                Product
+                  Product
               </Link>
-              <Link className="nav-bar-link" href="/automation/automates" prefetch={true}>Automate</Link>
+              {/* <Link className="nav-bar-link" href="/automation/automates" prefetch={true}>Automate</Link> */}
               <Link className="nav-bar-link" href="/documentation" prefetch={true}>Documentation</Link>
               <Link className="nav-bar-link" href="/integration/integration" prefetch={true}>Integration</Link>
             </div>
@@ -116,7 +133,7 @@ function Navbar() {
               </Link>
               <Link href="#">
                 <Image
-                  src="/images/usflag.svg"
+                  src={`/images/${flag_src}.webp`}
                   alt="USA flag"
                   width={23.17}
                   height={23.35}
