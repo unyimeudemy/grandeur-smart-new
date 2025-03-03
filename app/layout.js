@@ -1,9 +1,13 @@
 import Footer from "@/components/global/footer";
 import "./globals.css";
 
+
 export const metadata = {
   title: "Granduer Smart",
   description: "Granduer Smart unified system",
+  icons: {
+    icon: "/images/grandeurFavIcon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

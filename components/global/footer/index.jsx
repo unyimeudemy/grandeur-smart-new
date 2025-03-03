@@ -2,6 +2,16 @@ import React from 'react'
 // import styles from './Footer.module.css'
 // import styles from "./Footer.module.css"
 import Image from 'next/image';
+import grandeurfooter from "/public/images/grandeurfooter.svg";
+import footerfacebook from "/public/images/footerfacebook.svg";
+import footerlinkedin from "/public/images/footerlinkedin.svg";
+import footerinstagram from "/public/images/footerinstagram.svg";
+import footertwitter from "/public/images/footertwitter.svg";
+import appstorefooter from "/public/images/appstorefooter.svg";
+import googlestorefooter from "/public/images/googlestorefooter.svg";
+import grlocate from "/public/images/grlocate.svg";
+import footercall from "/public/images/footercall.svg";
+import footermail from "/public/images/footermail.svg";
 
 const Footer = () => {
   return (
@@ -11,7 +21,8 @@ const Footer = () => {
             <div className=" w-full ">
               <div className='ml-[30px] xl:ml-0'>
                 <Image
-                  src='/images/grandeurfooter.svg'
+                  // src='/images/grandeurfooter.svg'
+                  src={grandeurfooter}
                   alt='Grandeur smart Image'
                   width={145}
                   height={63}
@@ -99,37 +110,40 @@ const Footer = () => {
 
 
                 <div className='flex gap-[56px] mt-[36px] xl:mt-0 flex-col xl:flex-row'>
-                  <div className=''>
+                  <div className='  xl:flex xl:flex-col xl:gap-[10px]'>
                     <div>
                       <h1 className='text-white text-[14px] font-bold tracking-widest'><a href='#'>CONTACT</a></h1>
                     </div>
-                    <div className='flex'>
+                    <div className='flex  xl:items-center '>
                       <Image 
-                        src='/images/grlocate.svg'
+                        // src='/images/grlocate.svg'
+                        src={grlocate}
                         width={24}
                         height={24}
                         alt='Location'
-                        className='mt-[-25px] mr-2'
+                        className='mt-[-25px] mr-2 xl:mt-[-10px]'
                       />
                     <p className='flex tracking-wide text-white w-[241px] text-[14px]'><a href='#'>315 Herbert Macaulay Way, Yaba, Lagos 100001 Nigeria.</a></p>
                     </div>
-                    <div className='flex'>
+                    <div className='flex xl:justify-center xl:items-center '>
                       <Image 
-                        src='/images/footercall.svg'
+                        // src='/images/footercall.svg'
+                        src={footercall}
                         width={22}
                         height={22}
                         alt='Footer call'
-                        className='mt-[-18px] mr-2'
+                        className='mt-[-18px] mr-2 xl:mt-[0px]'
                       />
                       <p className='flex tracking-widest text-white w-[241px] text-[14px]'><a href='#'>+234 813 997 2473</a></p>
                     </div>
                     <div className='flex'>
                       <Image 
-                        src='/images/footermail.svg'
+                        // src='/images/footermail.svg'
+                        src={footermail}
                         width={20}
                         height={16}
                         alt='Mail'
-                        className='mt-[-15px] mr-2'
+                        className='mt-[-15px] mr-2 xl:mt-[0px]'
                       />
                       <p className='flex tracking-widest text-white w-[241px] text-[14px]'><a href='#'>info@grandeursmart.com</a></p>
                     </div>
@@ -143,7 +157,8 @@ const Footer = () => {
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
                       <a href='https://web.facebook.com/p/Mainlogix-Technology-Limited'>
                         <Image 
-                          src='/images/footerfacebook.svg'
+                          // src='/images/footerfacebook.svg'
+                          src={footerfacebook}
                           width={19}
                           height={10}
                           alt='Facebook'
@@ -154,7 +169,8 @@ const Footer = () => {
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
                       <a href='#'>
                         <Image 
-                          src='/images/footerlinkedin.svg'
+                          // src='/images/footerlinkedin.svg'
+                          src={footerlinkedin}
                           width={15}
                           height={15}
                           alt='Facebook'
@@ -165,7 +181,8 @@ const Footer = () => {
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
                       <a href='#'>
                         <Image 
-                          src='/images/footerinstagram.svg'
+                          // src='/images/footerinstagram.svg'
+                          src={footerinstagram}
                           width={20}
                           height={22}
                           alt='Facebook'
@@ -176,7 +193,8 @@ const Footer = () => {
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
                       <a href='#'>
                         <Image 
-                          src='/images/footertwitter.svg'
+                          // src='/images/footertwitter.svg'
+                          src={footertwitter}
                           width={20}
                           height={20}
                           alt='Facebook'
@@ -189,7 +207,8 @@ const Footer = () => {
                       <div>
                       <a href='#'>
                         <Image 
-                          src='/images/appstorefooter.svg'
+                          // src='/images/appstorefooter.svg'
+                          src={appstorefooter}
                           width={119}
                           height={35}
                           alt='AppStore'
@@ -199,7 +218,8 @@ const Footer = () => {
                       <div>
                       <a href='#'>
                         <Image 
-                          src='/images/googlestorefooter.svg'
+                          // src='/images/googlestorefooter.svg'
+                          src={googlestorefooter}
                           width={119}
                           height={35}
                           alt='AppStore'

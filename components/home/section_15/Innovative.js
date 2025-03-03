@@ -1,4 +1,5 @@
 import Image from "next/image";
+import smartgadgetdevices from "/public/images/smartgadgetdevices.svg";
 
 const Innovative = () => {
   return (
@@ -17,7 +18,7 @@ const Innovative = () => {
       <div className="flex justify-center">
         <div className=" flex justify-center w-[586px] h-[420px] mt-[20px] xl:w-[1226px] xl:h-[620px] xl:mt-[69px] overflow-hidden">
           <Image
-            src="/images/smartgadgetdevices.svg"
+            src={smartgadgetdevices}
             alt="smart gadget devices"
             width={1226}
             height={620}

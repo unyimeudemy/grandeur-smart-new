@@ -4,6 +4,18 @@ import Image from 'next/image'
 import styles from './PhoneBubble.module.css'
 import Slider from 'react-slick';
 
+
+import smallmatter00 from '/public/images/smallmatter00.svg';
+import smallaws00 from '/public/images/smallaws00.svg';
+import smallzigbee00 from '/public/images/smallzigbee00.svg';
+import smallwave00 from '/public/images/smallwave00.svg';
+import smalllorawan00 from '/public/images/smalllorawan00.svg';
+import smallalexa00 from '/public/images/smallalexa00.svg';
+import grouprainbow from '/public/images/grouprainbow.png';
+import smallhomekit00 from '/public/images/smallhomekit00.svg';
+import groupphonesmall from '/public/images/groupphonesmall.svg';
+
+
 const CustomPrevArrow = ({ onClick }) => (
     <div
       onClick={onClick}
@@ -87,10 +99,11 @@ function PhoneBubble() {
     <div className="flex justify-center items-center mt-[60px] mb-[80px] ">
         <div className='flex flex-col xl:flex-row  items-center w-[100%] justify-center '>
             <div className="flex justify-center items-center relative  w-[430px] h-[400px] overflow-hidden">
-                <div className=" absolute w-[350px] h-[350px] bg-black/5 rounded-full flex justify-center items-center">
+                {/* <div className=" absolute w-[350px] h-[350px] bg-black/5 rounded-full flex justify-center items-center">
                     <div className={styles.mymatterdiv1}>
                         <Image 
-                            src='/images/smallmatter00.svg'
+                            // src='/images/smallmatter00.svg'
+                            src={smallmatter00}
                             alt='matter'
                             width={136}
                             height={96}
@@ -249,10 +262,79 @@ function PhoneBubble() {
                         <div className={styles.mybackground1}></div>
                         </div>
                     </div>
+                </div> */}
+
+                <div className="absolute w-[350px] h-[350px] bg-black/5 rounded-full flex justify-center items-center">
+                    <div className={styles.mymatterdiv1}>
+                        <Image src={smallmatter00} alt='matter' width={136} height={96} />
+                    </div>
+                    <div className={styles.myawsdiv1}>
+                        <Image src={smallaws00} alt='aws' width={136} height={96} />
+                    </div>
+                    <div className={styles.myzigbeediv1}>
+                        <Image src={smallzigbee00} alt='zigbee' width={136} height={96} />
+                    </div>
+                    <div className={styles.mywavediv1}>
+                        <Image src={smallwave00} alt='wave' width={136} height={96} />
+                    </div>
+                    <div className={styles.myawsdiv2}>
+                        <Image src={smallaws00} alt='aws' width={136} height={96} />
+                    </div>
+                    <div className={styles.mymatterdiv2}>
+                        <Image src={smallmatter00} alt='matter' width={136} height={96} />
+                    </div>
+                    <div className={styles.myzigbeediv2}>
+                        <Image src={smallzigbee00} alt='zigbee' width={136} height={96} />
+                    </div>
+                    <div className={styles.mylorawandiv}>
+                        <Image src={smalllorawan00} alt='Lorawan' width={166} height={96} className={styles.mylorawanimg} />
+                    </div>
+                    <div className={styles.myzigbeediv3}>
+                        <Image src={smallzigbee00} alt='zigbee' width={136} height={96} />
+                    </div>
+                    <div className={styles.myawsdiv3}>
+                        <Image src={smallaws00} alt='aws' width={136} height={96} />
+                    </div>
+                    <div className={styles.mymatterdiv3}>
+                        <Image src={smallmatter00} alt='matter' width={136} height={96} />
+                    </div>
+                    <div className={styles.belowdiv}>
+                        <div className={styles.myalexadiv1}>
+                            <Image src={smallalexa00} alt='alexa' width={136} height={96} />
+                        </div>
+                        <div className={styles.myrainbowdiv1}>
+                            <Image src={grouprainbow} alt='rainbow' width={136} height={96} />
+                        </div>
+                        <div className={styles.myhomekitdiv1}>
+                            <Image src={smallhomekit00} alt='Home Kit' width={136} height={96} />
+                        </div>
+                        <div className={styles.mymatterdiv4}>
+                            <Image src={smallmatter00} alt='Matter' width={136} height={96} />
+                        </div>
+                        <div className={styles.mywavediv2}>
+                            <Image src={smallwave00} alt='Matter' width={136} height={96} />
+                        </div>
+                        <div className={styles.myhomekitdiv2}>
+                            <Image src={smallhomekit00} alt='Home Kit' width={136} height={96} />
+                        </div>
+                        <div className={styles.myalexadiv2}>
+                            <Image src={smallalexa00} alt='alexa' width={136} height={96} />
+                        </div>
+                        <div className={styles.myrainbowdiv2}>
+                            <Image src={grouprainbow} alt='rainbow' width={136} height={96} />
+                        </div>
+                    </div>
+                    <div className={styles.mybackground3}>
+                        <div className={styles.mybackground2}>
+                            <div className={styles.mybackground1}></div>
+                        </div>
+                    </div>
                 </div>
+
                 <div className={`${styles.myphonediv} `}>
                     <Image 
-                        src='/images/groupphonesmall.svg'
+                        // src='/images/groupphonesmall.svg'
+                        src={groupphonesmall}
                         width={200}
                         height={350}
                         alt='Phone Image'

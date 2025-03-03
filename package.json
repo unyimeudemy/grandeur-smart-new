@@ -59,6 +59,7 @@
     "react-toastify": "^10.0.5",
     "react-tsparticles": "^2.12.2",
     "reactflow": "^11.11.4",
+    "sharp": "^0.33.5",
     "slick-carousel": "^1.8.1",
     "sonner": "^1.7.0",
     "stripe": "^17.3.1",

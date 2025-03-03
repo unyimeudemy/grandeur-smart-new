@@ -1,6 +1,8 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+import humanpopcorn from "/public/images/humanpopcorn.svg"
+import drivercustomize from "/public/images/drivercustomize.svg"
  
 import {
   Carousel,
@@ -10,48 +12,103 @@ import {
   CarouselPrevious,
 } from "./carousel"
 
+// const images = [
+//   {
+//     images: '/humanpopcorn.svg',
+//     // images: humanpopcorn,
+//     htext: 'Customize Your Home',
+//     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+//   },
+//   {
+//     images: '/drivercustomize.svg',
+//     // images: drivercustomize,
+//     htext: 'Enhance Customization',
+//     ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+//   },
+//   {
+//     images: '/humanpopcorn.svg',
+//     // images: humanpopcorn,
+//     htext: 'Customize Your Home',
+//     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+//   },
+//   {
+//     images: '/drivercustomize.svg',
+//     htext: 'Enhance Customization',
+//     ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+//   },
+//   {
+//     images: '/humanpopcorn.svg',
+//     htext: 'Customize Your Home',
+//     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+//   },
+//   {
+//     images: '/drivercustomize.svg',
+//     htext: 'Enhance Customization',
+//     ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+//   },
+//   {
+//     images: '/humanpopcorn.svg',
+//     htext: 'Customize Your Home',
+//     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+//   },
+//   {
+//     images: '/drivercustomize.svg',
+//     htext: 'Enhance Customization',
+//     ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+//   },
+// ]
+
+
+
 const images = [
   {
-    images: '/humanpopcorn.svg',
+    images: humanpopcorn,
     htext: 'Customize Your Home',
     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
   },
   {
-    images: '/drivercustomize.svg',
+    images: drivercustomize,
     htext: 'Enhance Customization',
-    ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+    ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+
   },
   {
-    images: '/humanpopcorn.svg',
+    images: humanpopcorn,
     htext: 'Customize Your Home',
     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+
   },
   {
-    images: '/drivercustomize.svg',
+    images: drivercustomize,
     htext: 'Enhance Customization',
-    ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+    ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+
   },
   {
-    images: '/humanpopcorn.svg',
+    images: humanpopcorn,
     htext: 'Customize Your Home',
     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+
   },
   {
-    images: '/drivercustomize.svg',
+    images: drivercustomize,
     htext: 'Enhance Customization',
-    ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+    ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+
   },
   {
-    images: '/humanpopcorn.svg',
+    images: humanpopcorn,
     htext: 'Customize Your Home',
     ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+
   },
   {
-    images: '/drivercustomize.svg',
+    images: drivercustomize,
     htext: 'Enhance Customization',
-    ptext: 'Geo-fencing options allow users to have settings activate automatically when they are nearby.'
+    ptext: 'Personalize automation options for each room, like setting up acustomized Movie Night mode where lights dim and the entertainment system turns on.'
+
   },
-]
+];
 
 function Customize() {
   return (
@@ -88,9 +145,11 @@ function Customize() {
                 mobile-901-1200:basis-[480px]
               "
             >
-            <div className="relative w-[579px] h-[701px]">
+            <div className="relative w-[579px] h-[701px] flex flex-col items-center justify-center">
                 <Image 
-                    src={`/images/${item.images}`}
+                    // src={`/images/${item.images}`}
+                    src={item.images}
+
                     width={479}
                     height={701}
                     alt="Customize Images"

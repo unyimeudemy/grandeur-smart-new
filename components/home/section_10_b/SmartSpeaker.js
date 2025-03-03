@@ -7,7 +7,7 @@ const SmartSpeaker = () => {
     <div className=" bg-[#F5F5F5] w-full h-auto mt-[72px] xl:w-[1222px]  xl:h-[804px] flex flex-col items-center  overflow-hidden">
         <h1 className="items-center ml-[180px]  flex flex-col w-full ">
             <div className='flex justify-center '>
-                <p className='mr-[-120px] text-[70px] text-[#5C755E] font-bold font-helvetica mt-[-10px]'>Meet</p>
+                <p className='mr-[-140px] text-[70px] text-[#5C755E] font-bold font-helvetica mt-[-10px]'>Meet</p>
                 <div className='w-full h-full flex justify-center '>
                     <Image
                     src="/images/smart-logo.svg"
@@ -21,8 +21,6 @@ const SmartSpeaker = () => {
             <div className='mt-2 mx-3 mr-6 w-full font-bold font-helvetica text-[25px] flex justify-center text-[#5C755E] text-wrap'>
                 <div className='ml-[-150px] text-center w-full'>Your personalized AI voice assistant for homes <span className=' underline hover:cursor-pointer '>learn more</span> </div>
             </div>
-
-
         </h1>
         <div className='flex flex-col items-center xl:flex-row'>
             <div className='w-[80%]  xl:w-[40%] h-[60%] xl:h-full  flex flex-col justify-center items-center'>

@@ -1,6 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './Recommendation.module.css'
+import drivercustomize from "/public/images/drivercustomize.svg"
+
+import robotassistance from "/public/images/robotassistance.png"
+import gsmart from "/public/images/gsmart.svg"
+
 
 function Recommendation() {
   return (
@@ -11,7 +16,8 @@ function Recommendation() {
             <div className={styles.robot1}>
                 <div className={styles.robotassistancediv}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        // src={robotassistance}
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}
@@ -19,7 +25,7 @@ function Recommendation() {
                 </div>
                 <div className={styles.robotassistancediv2}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}
@@ -31,7 +37,8 @@ function Recommendation() {
             <div className={styles.gsmartdiv2}>
             <div className={styles.gsmartdiv}>
                 <Image 
-                    src='/images/gsmart.svg'
+                    // src={gsmart}
+                    src={gsmart}
                     alt='smart'
                     width={144}
                     height={92}
@@ -44,7 +51,7 @@ function Recommendation() {
             <div className={styles.robot2}>
                 <div className={styles.robotassistancediv3}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}
@@ -52,7 +59,7 @@ function Recommendation() {
                 </div>
                 <div className={styles.robotassistancediv4}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}
@@ -77,7 +84,7 @@ function Recommendation() {
             <div className={styles.robot1}>
                 <div className={styles.robotassistancediv}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}
@@ -85,7 +92,7 @@ function Recommendation() {
                 </div>
                 <div className={styles.robotassistancediv2}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}
@@ -97,7 +104,7 @@ function Recommendation() {
             <div className={styles.gsmartdiv2}>
             <div className={styles.gsmartdiv}>
                 <Image 
-                    src='/images/gsmart.svg'
+                    src={gsmart}
                     alt='smart'
                     width={144}
                     height={92}
@@ -110,7 +117,7 @@ function Recommendation() {
             <div className={styles.robot2}>
                 <div className={styles.robotassistancediv3}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}
@@ -118,7 +125,7 @@ function Recommendation() {
                 </div>
                 <div className={styles.robotassistancediv4}>
                     <Image 
-                        src='/images/robotassistance.png'
+                        src={robotassistance}
                         alt='Robot Assistance'
                         width={19}
                         height={19}

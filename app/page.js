@@ -49,7 +49,6 @@ export default function Home() {
       <Card_carousal_1/>
       <Card_carousal_2/>
       <Card_carousal_3/>
-
       <div className="bg-[#F5F5F5] h-[5vh]  mt-[-10px]"></div>
       <GrandeurGateway/>
       <UserPermManagement/>

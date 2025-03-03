@@ -66,7 +66,7 @@ function Navbar() {
   }, [])
 
   return (
-      <div className='flex justify-center px-8 fixed w-full top-10 z-10'>
+      <div className='flex justify-center px-8 fixed w-full top-6 z-50'>
 
         <div className=" bg-white  
           flex justify-between items-center shadow-[1px_1px_1px_1px_#f0efef] container
