@@ -14,11 +14,15 @@ import footercall from "/public/images/footercall.svg";
 import footermail from "/public/images/footermail.svg";
 
 const Footer = () => {
+
+  const currentYear = new Date().getFullYear();
+
+
   return (
       <div className="  pb-[30px] h-auto w-full overflow-hidden xl:px-[50px] xl:h-[438px] mt-[80px] pt-[50px] xl:py-12 flex flex-col items-center bg-gradient-to-l from-[#5C755E] to-[#78AC76]">
-        <div className="  w-[550px] xl:w-auto  overflow-hidden">
+        <div className="  w-[98%] xl:w-auto  overflow-hidden">
 
-            <div className=" w-full ">
+            <div className="  w-full ">
               <div className='ml-[30px] xl:ml-0'>
                 <Image
                   // src='/images/grandeurfooter.svg'
@@ -30,8 +34,9 @@ const Footer = () => {
                 />
               </div>
             </div>
-            <div className=" xl:gap-[56px] mt-[40px] xl:p-0 px-[30px] xl:px-0 flex flex-col xl:flex-row xl:justify-between">
-                <div className='  justify-between xl:justify-normal flex  xl:gap-[56px]'>
+
+            <div className="  xl:gap-[56px] mt-[40px] xl:p-0 px-[30px] xl:px-0 flex flex-col xl:flex-row xl:justify-between">
+                <div className=' gap-[15%]  xl:justify-normal flex  xl:gap-[56px]'>
                   <div className=' m'>
                     <div>
                       <h1 className='text-white text-[14px] font-bold tracking-widest'><a href='#'>QUICKLINKS</a></h1>
@@ -62,7 +67,7 @@ const Footer = () => {
                   </div>
                 </div>
 
-                <div className='flex xl:gap-[56px] mt-[36px] xl:mt-0 justify-between xl:justify-normal'>
+                <div className=' gap-[15%]  flex xl:gap-[56px] mt-[36px] xl:mt-0  xl:justify-normal'>
                   <div className=''>
                     <div>
                     <h1 className='text-white text-[14px] font-bold tracking-widest '><a href='#'>Developers</a></h1>
@@ -109,7 +114,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className='flex gap-[56px] mt-[36px] xl:mt-0 flex-col xl:flex-row'>
+                <div className='  flex gap-[56px] mt-[36px] xl:mt-0 flex-col xl:flex-row'>
                   <div className='  xl:flex xl:flex-col xl:gap-[10px]'>
                     <div>
                       <h1 className='text-white text-[14px] font-bold tracking-widest'><a href='#'>CONTACT</a></h1>
@@ -155,7 +160,10 @@ const Footer = () => {
                     </div>
                     <div className='flex gap-2 mt-2'>
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
-                      <a href='https://web.facebook.com/p/Mainlogix-Technology-Limited'>
+                      <a href='https://web.facebook.com/p/Mainlogix-Technology-Limited'
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         <Image 
                           // src='/images/footerfacebook.svg'
                           src={footerfacebook}
@@ -167,7 +175,10 @@ const Footer = () => {
                         </a>
                       </div>
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
-                      <a href='#'>
+                      <a href='https://www.linkedin.com/company/mainlogixafrica'
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         <Image 
                           // src='/images/footerlinkedin.svg'
                           src={footerlinkedin}
@@ -179,7 +190,12 @@ const Footer = () => {
                         </a>
                       </div>
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
-                      <a href='#'>
+                      <a 
+                        href='https://www.instagram.com/mainlogix_africa/'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      
+                      >
                         <Image 
                           // src='/images/footerinstagram.svg'
                           src={footerinstagram}
@@ -191,7 +207,11 @@ const Footer = () => {
                         </a>
                       </div>
                       <div className='bg-white w-[31px] h-[31px] rounded-full'>
-                      <a href='#'>
+                      <a 
+                        href='https://x.com/MainLogiXTech'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image 
                           // src='/images/footertwitter.svg'
                           src={footertwitter}
@@ -205,7 +225,11 @@ const Footer = () => {
                     </div>
                     <div className='flex gap-2 mt-[17px]'>
                       <div>
-                      <a href='#'>
+                      <a 
+                        href='https://apps.apple.com/ng/app/grandeursmart/id6670559995'
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         <Image 
                           // src='/images/appstorefooter.svg'
                           src={appstorefooter}
@@ -216,7 +240,11 @@ const Footer = () => {
                       </a>
                       </div>
                       <div>
-                      <a href='#'>
+                      <a 
+                        href='https://play.google.com/store/apps/details?id=com.grandeursmart.home.android'
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         <Image 
                           // src='/images/googlestorefooter.svg'
                           src={googlestorefooter}
@@ -231,9 +259,11 @@ const Footer = () => {
                 </div>
 
             </div>
+
             <div className=' my-5 mx-auto w-[90%] h-[1px] bg-white' />
-            <div className=' flex justify-center mt-4 tracking-widest'>
-              <p className='text-white text-[13px]'>© Website 2024 All Right Reserved.</p>
+
+            <div className='  flex justify-center mt-4 tracking-widest'>
+              <p className='text-white text-[13px]'>{`© Website ${currentYear} All Right Reserved.`}</p>
             </div>
         </div>
 

@@ -34,7 +34,7 @@ export default function Home() {
     <div className=" flex flex-col place-items-center ">
       <Navbar/>
       <_Carousel/>
-      <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C] w-[100%] h-[30px]"></div>
+      <div className="bg-gradient-to-r to-[#5C755E] from-[#78A67C] w-[100%] h-[50px] xl:h-[]"></div>
       <Popup/>
       <SmartHome/>
       <MultipleAI/>

@@ -32,7 +32,7 @@ const AdvanceFlow = () => {
                     videoRef.current.pause();
                 }
             },
-            { threshold: 0.7 } 
+            { threshold: 0.5 } 
         );
 
         if (videoRef.current) {
@@ -49,11 +49,11 @@ const AdvanceFlow = () => {
 
 
   return (
-    <div className="mt-[72px] xl:w-[1222px] h-[504px] xl:h-[804px] flex flex-col items-center overflow-hidden">
-        <div className=" text-[30px] mb-[30px] xl:mb-0 flex justify-center xl:w-[589px] xl:h-[55px] font-helvetica font-bold xl:text-[40px] text-[#5C755E]">
+    <div className=" mt-[72px] xl:w-[1222px] h-[504px] xl:h-[1220px] flex flex-col items-center overflow-hidden">
+        <div className=" text-[20px] mb-[30px] xl:mb-0 flex justify-center xl:w-[589px] xl:h-[55px] font-helvetica font-bold xl:text-[40px] text-[#5C755E]">
             <div>Advanced Flow Creation</div>
         </div>
-        <div className=" ml-[20px] overflow-hidden w-[522px] xl:mt-[34px] xl:w-[1022px] xl:h-[715px]  flex flex-col items-center">
+        <div className="  z-2 xl:ml-[20px] overflow-hidden w-[320px] xl:mt-[34px] xl:w-[1022px] xl:h-[1215px]  flex flex-col items-center">
             <video 
                 ref={videoRef}
                 muted
@@ -65,15 +65,24 @@ const AdvanceFlow = () => {
                 Your browser does not support the video tag.
             </video>
         </div>
- 
-        <div className='  h-[40px] w-full  flex justify-center xl:mt-[-140px] z-10'>
-                <div className=" w-[80%] xl:w-[1200px] flex justify-end ">
+
+        <div className=' hidden  z-1 mt-[-440px] ml-[100px]  xl:flex justify-center'>
+                <Image 
+                    src='/images/downPanel.svg'
+                    height={300}
+                    width={1000}
+                    alt='replay icon'
+                    className=' '
+                />
+        </div>
+        <div className=' xl:mt-[-50px]  mb-[10px] xl:mb-0 xl:h-[40px] w-full  flex justify-center  z-2'>
+                <div className="  w-[80%] xl:w-[1200px] flex justify-end ">
                     {advanceflowEnded && 
                     <div 
-                        className='  w-[120px] flex items-center gap-[10px]  hover:cursor-pointer mr-[50px] xl:mr-0'
+                        className=' xl:w-[120px] flex items-center gap-[5px] xl:gap-[10px]  hover:cursor-pointer xl:mr-[150px]'
                         onClick={handleReplay}
                         > 
-                        <div className='w-[15px] h-full  flex items-center'>
+                        <div className=' w-[11px] xl:w-[15px] h-full  flex items-center'>
                             <Image 
                                 src='/images/replay.svg'
                                 width={22}
@@ -81,20 +90,9 @@ const AdvanceFlow = () => {
                                 alt='replay icon'
                             />
                         </div>
-                        <div className='text-[#212121] font-normal font-roboto text-[17px]'>Replay</div>
+                        <div className='text-[#212121] font-normal font-roboto text-[10px] xl:text-[17px]'>Replay</div>
                     </div>}
                 </div>
-        </div>
-        <div className='w-full h-[110px]  flex justify-center'>
-            <div className='w-[90%] xl:w-[1222px] h-full  flex items-center rounded-2xl shadow-lg '>
-                <Image 
-                    src='/images/advance-flow-wide-card.svg'
-                    width={22}
-                    height={22}
-                    alt='replay icon'
-                    className='w-full h-full '
-                />
-            </div>
         </div>
 
     </div>

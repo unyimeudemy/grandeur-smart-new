@@ -137,7 +137,7 @@ function MyCarousel1() {
     <Carousel
       plugins={[
         Autoplay({
-          delay: 1200,
+          delay: 1500,
         })
       ]}
       opts={{

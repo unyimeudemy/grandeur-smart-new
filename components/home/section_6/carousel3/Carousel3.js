@@ -50,14 +50,10 @@ const Carousel3 = () => {
   };
 
   return (
-    <div className="w-[100%] ">
+    <div className="w-[100%] bg-gradient-to-r from-[#5C755E] to-[#78A67C]">
       <Slider {...settings}>
-        {/* <div className={styles.section1}> */}
           <FlowDiagram />
-        {/* </div> */}
-        {/* <div className={styles.section1}> */}
           <FlowDiagram2 />
-        {/* </div> */}
       </Slider>
     </div>
   );

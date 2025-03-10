@@ -66,22 +66,25 @@ function Navbar() {
   }, [])
 
   return (
-      <div className='flex justify-center px-8 fixed w-full top-6 z-50'>
+      <div className='flex justify-center xl:px-8 px-3 fixed w-full top-4  xl:top-6 z-50'>
 
         <div className=" bg-white  
           flex justify-between items-center shadow-[1px_1px_1px_1px_#f0efef] container
             w-full
-          rounded-[10px] h-[72px]">
-          <Link href="/">
-            <div className=' ml-[21px] md:w-[92px] md:h-[29px] md:ml-[20px] md:hover:cursor-pointer '>
-              <Image
-                src="/images/grandeursmart_logo.svg"
-                alt="Grandeur Smart Logo"
-                width={100}
-                height={32}
-              />
+          rounded-[10px] xl:h-[72px] h-[60px]">
+            <div className='flex items-center justify-center h-full  '>
+              <Link href="/">
+              <div className=' mt-[15px] xl:mt-0 ml-[21px] h-[40px] w-[80px] md:w-[92px] md:h-[29px] md:ml-[20px] md:hover:cursor-pointer '>
+                <Image
+                  src="/images/grandeursmart_logo.svg"
+                  alt="Grandeur Smart Logo"
+                  width={100}
+                  height={32}
+                />
+              </div>
+            </Link>
             </div>
-          </Link>
+
 
           <div className='flex items-center justify-center mr-[24px] gap-[16px]  lg:hidden '>
             <Image
@@ -89,10 +92,10 @@ function Navbar() {
               alt="energy insight"
               width={579}
               height={432}
-              className="w-[40px] h-[40px]"
+              className="xl:w-[40px] xl:h-[40px] w-[30px] h-[30px] "
             />
             <button onClick={toggleMenu} className="lg:bg-transparent lg:border-none lg:cursor-pointer">
-              {isMenuOpen ? <FiX className="lg:text-black lg:w-[30px] lg:h-[30px] h-[30px] w-[30px]" /> : <FiMenu className="lg:text-black lg:w-[30px] lg:h-[30px] lg:hidden h-[30px] w-[30px]" />}
+              {isMenuOpen ? <FiX className="xl:text-black xl:w-[30px] xl:h-[30px] h-[20px] w-[20px]" /> : <FiMenu className="xl:text-black xl:w-[30px] xl:h-[30px] xl:hidden h-[20px] w-[20px]" />}
             </button>
           </div>
 
@@ -157,7 +160,7 @@ function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className='absolute bg-white h-[79vh] w-[90%] top-[90px]
+            className='absolute bg-white h-[79vh] w-[90%] top-[64px]
             rounded-[10px] 
              '>
 
@@ -252,86 +255,7 @@ function Navbar() {
           </motion.div>}
 
       </div>
-        
   );
 }
 
 export default Navbar;
-
-
-
-
-// import React from 'react'
-// import Link from 'next/link'
-// import Image from 'next/image'
-// import "@/styles/Home.module.css"
-// import { Roboto } from 'next/font/google';
-// import SearchBar from '../searchbar/SearchBar';
-// import styles from './Navbar.module.css'
-// import { motion, AnimatePresence } from 'framer-motion';
-// // import { AiFillCaretDown } from "react-icons/ai"
-
-// const roboto = Roboto({
-//   weight: '400',
-//   subsets: ['latin'],
-// })
-
-// function Navbar() {
-//   return (
-//       <div className={roboto.className}>
-//         <div className={styles.nav}>
-//         <div className={styles.navbar}>
-//           <div className={styles.navbarlogo}>
-//             <Image
-//               src="/grandeursmart.png"
-//               alt="Grandeur Smart Logo"
-//               width={100}
-//               height={32}
-//             />
-//           </div>
-//           <div className={styles.link}>
-//             <Link className={styles.navlink} href="/">Home</Link>
-//             <Link className={styles.navlink} href="./product">Product</Link>
-//             <Link className={styles.navlink} href="./documentation">Documentation</Link>
-//             {/* <AiFillCaretDown className='drops' /> */}
-//             <Link className={styles.navlink} href="./integration">Integration</Link>
-//           </div>
-//           <div className={styles.icons}>
-//             <div>
-//               <SearchBar />
-//             </div>
-//             <Link href="#">
-//             <Image
-//                 src="/Group3.png"
-//                 alt='sign-in'
-//                 width={18.94}
-//                 height={21.31}
-//                 className={styles.signin}
-//               />
-//             </Link>
-//             <Link href="#">
-//               <Image
-//                 src="/usa.png"
-//                 alt="group3"
-//                 width={28}
-//                 height={28}
-//                 className={styles.usa}
-//               />
-//             </Link>
-//             <Link href="#">
-//               <Image
-//                 src="/cart.png"
-//                 alt="group3"
-//                 width={28}
-//                 height={28}
-//                 className={styles.cart}
-//               />
-//             </Link>
-//           </div>
-//           </div>
-//         </div>
-//       </div>
-//   )
-// }
-
-// export default Navbar

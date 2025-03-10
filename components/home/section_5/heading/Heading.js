@@ -18,8 +18,8 @@ function Heading() {
   };
 
   return (
-    <div className="  flex flex-col items-center  xl:items-start  xl:flex-row   ">
-        <div className='xl:h-[756px] xl:w-[756px]  xl:mt-0'>
+    <div className=" mt-[40px]  flex flex-col items-center  xl:items-start  xl:flex-row   ">
+        <div className=' w-[340px] h-[340px] xl:h-[756px] xl:w-[756px]  xl:mt-0'>
             <Image 
                 src='/images/nightmode.svg'
                 alt='Moon'
@@ -29,15 +29,16 @@ function Heading() {
         </div>
         <div className=' xl:ml-[-100px] w-full flex justify-center items-center'>
             <div className={`${styles.headdiv}   flex flex-col `}>
-                <div className='w-full text-[35px] mb-[10px] flex justify-center'>
-                    <div className=" xl:mb-[18px] xl:w-[474px] xl:h-[48px] font-helvetica font-bold xl:text-[36px] text-[#212121]">
-                        Night Mode Automation.
-                    </div>
+                <div className='
+                    w-full text-[25px] mb-[10px] flex justify-center
+                    xl:mb-[18px] xl:w-[474px] xl:h-[48px] font-helvetica font-bold 
+                    xl:text-[36px] text-[#212121] text-center
+                '>
+                    Night Mode Automation
                 </div>
                 <div className='flex justify-center'>
-                    <div className=" mb-3 w-[90%] xl:mb-[26px]  xl:w-[509px] xl:h-[113px] font-roboto font-medium text-[16px] text-[#212121]">
-                    Night Mode is designed to create a restful environment, enhancing comfort and security during nighttime hours. With intelligent automation, Night Mode seamlessly adjusts your home’s settings to match your preferred nighttime routine.
-
+                    <div className=" mb-3 w-[90%] xl:mb-[26px]  xl:w-[509px] xl:h-[113px] font-roboto font-medium text-[13px] xl:text-[16px] text-[#212121]">
+                        Night Mode is designed to create a restful environment, enhancing comfort and security during nighttime hours. With intelligent automation, Night Mode seamlessly adjusts your home’s settings to match your preferred nighttime routine.
                     </div>
                 </div>
                 <div className='w-[100%] flex justify-center '>

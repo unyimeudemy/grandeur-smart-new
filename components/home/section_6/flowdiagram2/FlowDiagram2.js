@@ -203,11 +203,11 @@ const FlowDiagram2 = () => {
 
 return (
     // <div className=' w-[100%] h-[787px] flex flex-col items-center justify-center bg-gradient-to-r from-[#5C755E] to-[#78A67C]'>
-    <div className=' overflow-hidden w-[100%] h-[787px] flex flex-col items-center justify-center bg-gradient-to-r from-[#5C755E] to-[#78A67C]'>
+    <div className=' overflow-hidden w-[100%] h-[650px] xl:h-[787px] flex flex-col items-center justify-center'>
       <div className="mt-[80px]  w-[90%] items-center flex flex-col xl:flex-row  xl:gap-[175px] xl:w-[1196px] xl:h-[747px] xl:mt-[63px] xl:ml-[83px] xl:mr-[70px] xl:mb-[104px] ">
         <div className=" w-[95%] xl:w-[403px] xl:h-[747px] flex flex-col xl:mt-[20px]">
           <div className="xl:w-[403px] xl:h-[146px] xl:mt-[44px] flex flex-col">
-            <div className='w-[350px]  xl:w-[403px] xl:h-[84px]'>
+            <div className='w-[250px]  xl:w-[403px] xl:h-[84px]'>
               <Image 
                 src="/images/logoplustext.svg" 
                 width={403} 
@@ -215,13 +215,13 @@ return (
                 alt="Logo Plus Text" 
               />
             </div>
-            <div className=" mt-[15px] text-[15px] xl:w-[403px] xl:h-[44px] font-roboto xl:text-[16px] font-medium text-white xl:mt-[18px]">
+            <div className=" mt-[15px] text-[13px] xl:w-[403px] xl:h-[44px] font-roboto xl:text-[16px] font-medium text-white xl:mt-[18px]">
               Experience proactive, AI-driven control that adapts to your needs—even when you’re not around.
             </div>
           </div>
         </div>
         <div className=" mt-[-20px] xl:mt-[-280px] xl:w-[390px] xl:h-[506px] flex flex-col items-center">
-          <div className='w-[330px]  xl:w-[434px] xl:h-[706px]'>
+          <div className='w-[240px]  xl:w-[434px] xl:h-[706px]'>
             <Image 
               src="/images/flow2.svg" 
               width={464} 
